@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryManagement.Model
 {
-    public class Books
+    public class Book
     {
         
         public int Id {get; set; }
@@ -18,6 +18,11 @@ namespace LibraryManagement.Model
         public int PublishedYear { get; set; }
 
         public int Pages {  get; set; }
+
+        public override string ToString()
+        {
+            return $"Id:{Id}\tName: {Name} \tAuthor: {Author} \tCategory: {Category}\tPublished Year: {PublishedYear}\tPages: {Pages}";
+        }
 
 
     }

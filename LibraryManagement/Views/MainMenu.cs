@@ -43,7 +43,8 @@ namespace LibraryManagement.Views
         public static void InitAdminMenu()
         {
             Console.Clear();
-            AdminMenu.InitAdminMenu();
+            AdminMenu am = new AdminMenu();
+            am.InitAdminMenu();
         }
 
         public static void InitUserMenu()

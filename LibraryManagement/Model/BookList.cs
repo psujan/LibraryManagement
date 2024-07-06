@@ -12,903 +12,903 @@ namespace LibraryManagement.Model
         {
              new Dictionary<string, object>
             {
-                { "id", 1 },
-                { "name", "To Kill a Mockingbird" },
-                { "author", "Harper Lee" },
-                { "pages", 281 },
-                { "published_year", 1960 },
-                { "category", "Fiction" }
+                { "Id", 1 },
+                { "Name", "To Kill a Mockingbird" },
+                { "Author", "Harper Lee" },
+                { "Pages", 281 },
+                { "PublishedYear", 1960 },
+                { "Category", "Fiction" }
             },
              new Dictionary<string, object>
             {
-                { "id", 2 },
-                { "name", "1984" },
-                { "author", "George Orwell" },
-                { "pages", 328 },
-                { "published_year", 1949 },
-                { "category", "Dystopian" }
+                { "Id", 2 },
+                { "Name", "1984" },
+                { "Author", "George Orwell" },
+                { "Pages", 328 },
+                { "PublishedYear", 1949 },
+                { "Category", "Dystopian" }
             },
              new Dictionary<string, object>
         {
-            { "id", 3 },
-            { "name", "Moby Dick" },
-            { "author", "Herman Melville" },
-            { "pages", 635 },
-            { "published_year", 1851 },
-            { "category", "Adventure" }
+            { "Id", 3 },
+            { "Name", "Moby Dick" },
+            { "Author", "Herman Melville" },
+            { "Pages", 635 },
+            { "PublishedYear", 1851 },
+            { "Category", "Adventure" }
         },
              new Dictionary<string, object>
         {
-            { "id", 4 },
-            { "name", "Pride and Prejudice" },
-            { "author", "Jane Austen" },
-            { "pages", 279 },
-            { "published_year", 1813 },
-            { "category", "Romance" }
+            { "Id", 4 },
+            { "Name", "PrIde and Prejudice" },
+            { "Author", "Jane Austen" },
+            { "Pages", 279 },
+            { "PublishedYear", 1813 },
+            { "Category", "Romance" }
         },
              new Dictionary<string, object>
         {
-            { "id", 5 },
-            { "name", "The Great Gatsby" },
-            { "author", "F. Scott Fitzgerald" },
-            { "pages", 180 },
-            { "published_year", 1925 },
-            { "category", "Fiction" }
+            { "Id", 5 },
+            { "Name", "The Great Gatsby" },
+            { "Author", "F. Scott Fitzgerald" },
+            { "Pages", 180 },
+            { "PublishedYear", 1925 },
+            { "Category", "Fiction" }
         },
              new Dictionary<string, object>
         {
-            { "id", 6 },
-            { "name", "War and Peace" },
-            { "author", "Leo Tolstoy" },
-            { "pages", 1225 },
-            { "published_year", 1869 },
-            { "category", "Historical Fiction" }
+            { "Id", 6 },
+            { "Name", "War and Peace" },
+            { "Author", "Leo Tolstoy" },
+            { "Pages", 1225 },
+            { "PublishedYear", 1869 },
+            { "Category", "Historical Fiction" }
         },
              new Dictionary<string, object>
             {
-                { "id", 7 },
-                { "name", "The Catcher in the Rye" },
-                { "author", "J.D. Salinger" },
-                { "pages", 214 },
-                { "published_year", 1951 },
-                { "category", "Fiction" }
+                { "Id", 7 },
+                { "Name", "The Catcher in the Rye" },
+                { "Author", "J.D. Salinger" },
+                { "Pages", 214 },
+                { "PublishedYear", 1951 },
+                { "Category", "Fiction" }
             },
              new Dictionary<string, object>
              {
-                 { "id", 8 },
-                 { "name", "The Hobbit" },
-                 { "author", "J.R.R. Tolkien" },
-                 { "pages", 310 },
-                 { "published_year", 1937 },
-                 { "category", "Fantasy" }
+                 { "Id", 8 },
+                 { "Name", "The Hobbit" },
+                 { "Author", "J.R.R. Tolkien" },
+                 { "Pages", 310 },
+                 { "PublishedYear", 1937 },
+                 { "Category", "Fantasy" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 9 },
-                 { "name", "Brave New World" },
-                 { "author", "Aldous Huxley" },
-                 { "pages", 268 },
-                 { "published_year", 1932 },
-                 { "category", "Dystopian" }
+                 { "Id", 9 },
+                 { "Name", "Brave New World" },
+                 { "Author", "Aldous Huxley" },
+                 { "Pages", 268 },
+                 { "PublishedYear", 1932 },
+                 { "Category", "Dystopian" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 10 },
-                 { "name", "Crime and Punishment" },
-                 { "author", "Fyodor Dostoevsky" },
-                 { "pages", 671 },
-                 { "published_year", 1866 },
-                 { "category", "Psychological Fiction" }
+                 { "Id", 10 },
+                 { "Name", "Crime and Punishment" },
+                 { "Author", "Fyodor Dostoevsky" },
+                 { "Pages", 671 },
+                 { "PublishedYear", 1866 },
+                 { "Category", "Psychological Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 11 },
-                 { "name", "Jane Eyre" },
-                 { "author", "Charlotte Brontë" },
-                 { "pages", 500 },
-                 { "published_year", 1847 },
-                 { "category", "Romance" }
+                 { "Id", 11 },
+                 { "Name", "Jane Eyre" },
+                 { "Author", "Charlotte Brontë" },
+                 { "Pages", 500 },
+                 { "PublishedYear", 1847 },
+                 { "Category", "Romance" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 12 },
-                 { "name", "Wuthering Heights" },
-                 { "author", "Emily Brontë" },
-                 { "pages", 416 },
-                 { "published_year", 1847 },
-                 { "category", "Gothic Fiction" }
+                 { "Id", 12 },
+                 { "Name", "Wuthering Heights" },
+                 { "Author", "Emily Brontë" },
+                 { "Pages", 416 },
+                 { "PublishedYear", 1847 },
+                 { "Category", "Gothic Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 13 },
-                 { "name", "Great Expectations" },
-                 { "author", "Charles Dickens" },
-                 { "pages", 505 },
-                 { "published_year", 1861 },
-                 { "category", "Fiction" }
+                 { "Id", 13 },
+                 { "Name", "Great Expectations" },
+                 { "Author", "Charles Dickens" },
+                 { "Pages", 505 },
+                 { "PublishedYear", 1861 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 14 },
-                 { "name", "The Odyssey" },
-                 { "author", "Homer" },
-                 { "pages", 541 },
-                 { "published_year", -800 },
-                 { "category", "Epic Poetry" }
+                 { "Id", 14 },
+                 { "Name", "The Odyssey" },
+                 { "Author", "Homer" },
+                 { "Pages", 541 },
+                 { "PublishedYear", -800 },
+                 { "Category", "Epic Poetry" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 15 },
-                 { "name", "Ulysses" },
-                 { "author", "James Joyce" },
-                 { "pages", 730 },
-                 { "published_year", 1922 },
-                 { "category", "Modernist Fiction" }
+                 { "Id", 15 },
+                 { "Name", "Ulysses" },
+                 { "Author", "James Joyce" },
+                 { "Pages", 730 },
+                 { "PublishedYear", 1922 },
+                 { "Category", "Modernist Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 16 },
-                 { "name", "The Divine Comedy" },
-                 { "author", "Dante Alighieri" },
-                 { "pages", 798 },
-                 { "published_year", 1320 },
-                 { "category", "Epic Poetry" }
+                 { "Id", 16 },
+                 { "Name", "The Divine Comedy" },
+                 { "Author", "Dante Alighieri" },
+                 { "Pages", 798 },
+                 { "PublishedYear", 1320 },
+                 { "Category", "Epic Poetry" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 17 },
-                 { "name", "The Brothers Karamazov" },
-                 { "author", "Fyodor Dostoevsky" },
-                 { "pages", 796 },
-                 { "published_year", 1880 },
-                 { "category", "Philosophical Fiction" }
+                 { "Id", 17 },
+                 { "Name", "The Brothers Karamazov" },
+                 { "Author", "Fyodor Dostoevsky" },
+                 { "Pages", 796 },
+                 { "PublishedYear", 1880 },
+                 { "Category", "Philosophical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 18 },
-                 { "name", "Les Misérables" },
-                 { "author", "Victor Hugo" },
-                 { "pages", 1232 },
-                 { "published_year", 1862 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 18 },
+                 { "Name", "Les Misérables" },
+                 { "Author", "Victor Hugo" },
+                 { "Pages", 1232 },
+                 { "PublishedYear", 1862 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 19 },
-                 { "name", "Anna Karenina" },
-                 { "author", "Leo Tolstoy" },
-                 { "pages", 864 },
-                 { "published_year", 1878 },
-                 { "category", "Romance" }
+                 { "Id", 19 },
+                 { "Name", "Anna Karenina" },
+                 { "Author", "Leo Tolstoy" },
+                 { "Pages", 864 },
+                 { "PublishedYear", 1878 },
+                 { "Category", "Romance" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 20 },
-                 { "name", "One Hundred Years of Solitude" },
-                 { "author", "Gabriel Garcia Marquez" },
-                 { "pages", 417 },
-                 { "published_year", 1967 },
-                 { "category", "Magic Realism" }
+                 { "Id", 20 },
+                 { "Name", "One Hundred Years of Solitude" },
+                 { "Author", "Gabriel Garcia Marquez" },
+                 { "Pages", 417 },
+                 { "PublishedYear", 1967 },
+                 { "Category", "Magic Realism" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 21 },
-                 { "name", "Don Quixote" },
-                 { "author", "Miguel de Cervantes" },
-                 { "pages", 1072 },
-                 { "published_year", 1615 },
-                 { "category", "Satire" }
+                 { "Id", 21 },
+                 { "Name", "Don Quixote" },
+                 { "Author", "Miguel de Cervantes" },
+                 { "Pages", 1072 },
+                 { "PublishedYear", 1615 },
+                 { "Category", "Satire" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 22 },
-                 { "name", "The Iliad" },
-                 { "author", "Homer" },
-                 { "pages", 704 },
-                 { "published_year", -750 },
-                 { "category", "Epic Poetry" }
+                 { "Id", 22 },
+                 { "Name", "The Iliad" },
+                 { "Author", "Homer" },
+                 { "Pages", 704 },
+                 { "PublishedYear", -750 },
+                 { "Category", "Epic Poetry" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 23 },
-                 { "name", "The Picture of Dorian Gray" },
-                 { "author", "Oscar Wilde" },
-                 { "pages", 254 },
-                 { "published_year", 1890 },
-                 { "category", "Philosophical Fiction" }
+                 { "Id", 23 },
+                 { "Name", "The Picture of Dorian Gray" },
+                 { "Author", "Oscar Wilde" },
+                 { "Pages", 254 },
+                 { "PublishedYear", 1890 },
+                 { "Category", "Philosophical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 24 },
-                 { "name", "Frankenstein" },
-                 { "author", "Mary Shelley" },
-                 { "pages", 280 },
-                 { "published_year", 1818 },
-                 { "category", "Gothic Fiction" }
+                 { "Id", 24 },
+                 { "Name", "Frankenstein" },
+                 { "Author", "Mary Shelley" },
+                 { "Pages", 280 },
+                 { "PublishedYear", 1818 },
+                 { "Category", "Gothic Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 25 },
-                 { "name", "Dracula" },
-                 { "author", "Bram Stoker" },
-                 { "pages", 418 },
-                 { "published_year", 1897 },
-                 { "category", "Horror" }
+                 { "Id", 25 },
+                 { "Name", "Dracula" },
+                 { "Author", "Bram Stoker" },
+                 { "Pages", 418 },
+                 { "PublishedYear", 1897 },
+                 { "Category", "Horror" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 26 },
-                 { "name", "Heart of Darkness" },
-                 { "author", "Joseph Conrad" },
-                 { "pages", 122 },
-                 { "published_year", 1899 },
-                 { "category", "Novella" }
+                 { "Id", 26 },
+                 { "Name", "Heart of Darkness" },
+                 { "Author", "Joseph Conrad" },
+                 { "Pages", 122 },
+                 { "PublishedYear", 1899 },
+                 { "Category", "Novella" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 27 },
-                 { "name", "The Metamorphosis" },
-                 { "author", "Franz Kafka" },
-                 { "pages", 201 },
-                 { "published_year", 1915 },
-                 { "category", "Absurdist Fiction" }
+                 { "Id", 27 },
+                 { "Name", "The Metamorphosis" },
+                 { "Author", "Franz Kafka" },
+                 { "Pages", 201 },
+                 { "PublishedYear", 1915 },
+                 { "Category", "Absurdist Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 28 },
-                 { "name", "The Trial" },
-                 { "author", "Franz Kafka" },
-                 { "pages", 255 },
-                 { "published_year", 1925 },
-                 { "category", "Existential Fiction" }
+                 { "Id", 28 },
+                 { "Name", "The Trial" },
+                 { "Author", "Franz Kafka" },
+                 { "Pages", 255 },
+                 { "PublishedYear", 1925 },
+                 { "Category", "Existential Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 29 },
-                 { "name", "Middlemarch" },
-                 { "author", "George Eliot" },
-                 { "pages", 904 },
-                 { "published_year", 1871 },
-                 { "category", "Fiction" }
+                 { "Id", 29 },
+                 { "Name", "MIddlemarch" },
+                 { "Author", "George Eliot" },
+                 { "Pages", 904 },
+                 { "PublishedYear", 1871 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 30 },
-                 { "name", "The Count of Monte Cristo" },
-                 { "author", "Alexandre Dumas" },
-                 { "pages", 1276 },
-                 { "published_year", 1844 },
-                 { "category", "Adventure" }
+                 { "Id", 30 },
+                 { "Name", "The Count of Monte Cristo" },
+                 { "Author", "Alexandre Dumas" },
+                 { "Pages", 1276 },
+                 { "PublishedYear", 1844 },
+                 { "Category", "Adventure" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 31 },
-                 { "name", "Madame Bovary" },
-                 { "author", "Gustave Flaubert" },
-                 { "pages", 329 },
-                 { "published_year", 1857 },
-                 { "category", "Fiction" }
+                 { "Id", 31 },
+                 { "Name", "Madame Bovary" },
+                 { "Author", "Gustave Flaubert" },
+                 { "Pages", 329 },
+                 { "PublishedYear", 1857 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 32 },
-                 { "name", "The Old Man and the Sea" },
-                 { "author", "Ernest Hemingway" },
-                 { "pages", 127 },
-                 { "published_year", 1952 },
-                 { "category", "Fiction" }
+                 { "Id", 32 },
+                 { "Name", "The Old Man and the Sea" },
+                 { "Author", "Ernest Hemingway" },
+                 { "Pages", 127 },
+                 { "PublishedYear", 1952 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 33 },
-                 { "name", "A Tale of Two Cities" },
-                 { "author", "Charles Dickens" },
-                 { "pages", 489 },
-                 { "published_year", 1859 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 33 },
+                 { "Name", "A Tale of Two Cities" },
+                 { "Author", "Charles Dickens" },
+                 { "Pages", 489 },
+                 { "PublishedYear", 1859 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 34 },
-                 { "name", "Fahrenheit 451" },
-                 { "author", "Ray Bradbury" },
-                 { "pages", 194 },
-                 { "published_year", 1953 },
-                 { "category", "Dystopian" }
+                 { "Id", 34 },
+                 { "Name", "Fahrenheit 451" },
+                 { "Author", "Ray Bradbury" },
+                 { "Pages", 194 },
+                 { "PublishedYear", 1953 },
+                 { "Category", "Dystopian" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 35 },
-                 { "name", "The Catch-22" },
-                 { "author", "Joseph Heller" },
-                 { "pages", 453 },
-                 { "published_year", 1961 },
-                 { "category", "Satire" }
+                 { "Id", 35 },
+                 { "Name", "The Catch-22" },
+                 { "Author", "Joseph Heller" },
+                 { "Pages", 453 },
+                 { "PublishedYear", 1961 },
+                 { "Category", "Satire" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 36 },
-                 { "name", "Lolita" },
-                 { "author", "Vladimir Nabokov" },
-                 { "pages", 336 },
-                 { "published_year", 1955 },
-                 { "category", "Fiction" }
+                 { "Id", 36 },
+                 { "Name", "Lolita" },
+                 { "Author", "Vladimir Nabokov" },
+                 { "Pages", 336 },
+                 { "PublishedYear", 1955 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 37 },
-                 { "name", "Beloved" },
-                 { "author", "Toni Morrison" },
-                 { "pages", 324 },
-                 { "published_year", 1987 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 37 },
+                 { "Name", "Beloved" },
+                 { "Author", "Toni Morrison" },
+                 { "Pages", 324 },
+                 { "PublishedYear", 1987 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 38 },
-                 { "name", "Invisible Man" },
-                 { "author", "Ralph Ellison" },
-                 { "pages", 581 },
-                 { "published_year", 1952 },
-                 { "category", "Fiction" }
+                 { "Id", 38 },
+                 { "Name", "Invisible Man" },
+                 { "Author", "Ralph Ellison" },
+                 { "Pages", 581 },
+                 { "PublishedYear", 1952 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 39 },
-                 { "name", "The Grapes of Wrath" },
-                 { "author", "John Steinbeck" },
-                 { "pages", 464 },
-                 { "published_year", 1939 },
-                 { "category", "Fiction" }
+                 { "Id", 39 },
+                 { "Name", "The Grapes of Wrath" },
+                 { "Author", "John Steinbeck" },
+                 { "Pages", 464 },
+                 { "PublishedYear", 1939 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 40 },
-                 { "name", "Gone with the Wind" },
-                 { "author", "Margaret Mitchell" },
-                 { "pages", 1037 },
-                 { "published_year", 1936 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 40 },
+                 { "Name", "Gone with the Wind" },
+                 { "Author", "Margaret Mitchell" },
+                 { "Pages", 1037 },
+                 { "PublishedYear", 1936 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 41 },
-                 { "name", "The Sun Also Rises" },
-                 { "author", "Ernest Hemingway" },
-                 { "pages", 251 },
-                 { "published_year", 1926 },
-                 { "category", "Fiction" }
+                 { "Id", 41 },
+                 { "Name", "The Sun Also Rises" },
+                 { "Author", "Ernest Hemingway" },
+                 { "Pages", 251 },
+                 { "PublishedYear", 1926 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 42 },
-                 { "name", "East of Eden" },
-                 { "author", "John Steinbeck" },
-                 { "pages", 601 },
-                 { "published_year", 1952 },
-                 { "category", "Fiction" }
+                 { "Id", 42 },
+                 { "Name", "East of Eden" },
+                 { "Author", "John Steinbeck" },
+                 { "Pages", 601 },
+                 { "PublishedYear", 1952 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 43 },
-                 { "name", "Slaughterhouse-Five" },
-                 { "author", "Kurt Vonnegut" },
-                 { "pages", 275 },
-                 { "published_year", 1969 },
-                 { "category", "Science Fiction" }
+                 { "Id", 43 },
+                 { "Name", "Slaughterhouse-Five" },
+                 { "Author", "Kurt Vonnegut" },
+                 { "Pages", 275 },
+                 { "PublishedYear", 1969 },
+                 { "Category", "Science Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 44 },
-                 { "name", "The Handmaid's Tale" },
-                 { "author", "Margaret Atwood" },
-                 { "pages", 311 },
-                 { "published_year", 1985 },
-                 { "category", "Dystopian" }
+                 { "Id", 44 },
+                 { "Name", "The HandmaId's Tale" },
+                 { "Author", "Margaret Atwood" },
+                 { "Pages", 311 },
+                 { "PublishedYear", 1985 },
+                 { "Category", "Dystopian" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 45 },
-                 { "name", "Of Mice and Men" },
-                 { "author", "John Steinbeck" },
-                 { "pages", 107 },
-                 { "published_year", 1937 },
-                 { "category", "Fiction" }
+                 { "Id", 45 },
+                 { "Name", "Of Mice and Men" },
+                 { "Author", "John Steinbeck" },
+                 { "Pages", 107 },
+                 { "PublishedYear", 1937 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 46 },
-                 { "name", "The Road" },
-                 { "author", "Cormac McCarthy" },
-                 { "pages", 287 },
-                 { "published_year", 2006 },
-                 { "category", "Post-Apocalyptic" }
+                 { "Id", 46 },
+                 { "Name", "The Road" },
+                 { "Author", "Cormac McCarthy" },
+                 { "Pages", 287 },
+                 { "PublishedYear", 2006 },
+                 { "Category", "Post-Apocalyptic" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 47 },
-                 { "name", "The Catcher in the Rye" },
-                 { "author", "J.D. Salinger" },
-                 { "pages", 214 },
-                 { "published_year", 1951 },
-                 { "category", "Fiction" }
+                 { "Id", 47 },
+                 { "Name", "The Catcher in the Rye" },
+                 { "Author", "J.D. Salinger" },
+                 { "Pages", 214 },
+                 { "PublishedYear", 1951 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 48 },
-                 { "name", "The Lord of the Rings" },
-                 { "author", "J.R.R. Tolkien" },
-                 { "pages", 1216 },
-                 { "published_year", 1954 },
-                 { "category", "Fantasy" }
+                 { "Id", 48 },
+                 { "Name", "The Lord of the Rings" },
+                 { "Author", "J.R.R. Tolkien" },
+                 { "Pages", 1216 },
+                 { "PublishedYear", 1954 },
+                 { "Category", "Fantasy" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 49 },
-                 { "name", "The Bell Jar" },
-                 { "author", "Sylvia Plath" },
-                 { "pages", 244 },
-                 { "published_year", 1963 },
-                 { "category", "Fiction" }
+                 { "Id", 49 },
+                 { "Name", "The Bell Jar" },
+                 { "Author", "Sylvia Plath" },
+                 { "Pages", 244 },
+                 { "PublishedYear", 1963 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 50 },
-                 { "name", "The Shining" },
-                 { "author", "Stephen King" },
-                 { "pages", 447 },
-                 { "published_year", 1977 },
-                 { "category", "Horror" }
+                 { "Id", 50 },
+                 { "Name", "The Shining" },
+                 { "Author", "Stephen King" },
+                 { "Pages", 447 },
+                 { "PublishedYear", 1977 },
+                 { "Category", "Horror" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 51 },
-                 { "name", "The Alchemist" },
-                 { "author", "Paulo Coelho" },
-                 { "pages", 208 },
-                 { "published_year", 1988 },
-                 { "category", "Fiction" }
+                 { "Id", 51 },
+                 { "Name", "The Alchemist" },
+                 { "Author", "Paulo Coelho" },
+                 { "Pages", 208 },
+                 { "PublishedYear", 1988 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 52 },
-                 { "name", "Harry Potter and the Sorcerer's Stone" },
-                 { "author", "J.K. Rowling" },
-                 { "pages", 309 },
-                 { "published_year", 1997 },
-                 { "category", "Fantasy" }
+                 { "Id", 52 },
+                 { "Name", "Harry Potter and the Sorcerer's Stone" },
+                 { "Author", "J.K. Rowling" },
+                 { "Pages", 309 },
+                 { "PublishedYear", 1997 },
+                 { "Category", "Fantasy" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 53 },
-                 { "name", "Life of Pi" },
-                 { "author", "Yann Martel" },
-                 { "pages", 319 },
-                 { "published_year", 2001 },
-                 { "category", "Adventure" }
+                 { "Id", 53 },
+                 { "Name", "Life of Pi" },
+                 { "Author", "Yann Martel" },
+                 { "Pages", 319 },
+                 { "PublishedYear", 2001 },
+                 { "Category", "Adventure" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 54 },
-                 { "name", "The Fault in Our Stars" },
-                 { "author", "John Green" },
-                 { "pages", 313 },
-                 { "published_year", 2012 },
-                 { "category", "Young Adult" }
+                 { "Id", 54 },
+                 { "Name", "The Fault in Our Stars" },
+                 { "Author", "John Green" },
+                 { "Pages", 313 },
+                 { "PublishedYear", 2012 },
+                 { "Category", "Young Adult" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 55 },
-                 { "name", "The Da Vinci Code" },
-                 { "author", "Dan Brown" },
-                 { "pages", 689 },
-                 { "published_year", 2003 },
-                 { "category", "Thriller" }
+                 { "Id", 55 },
+                 { "Name", "The Da Vinci Code" },
+                 { "Author", "Dan Brown" },
+                 { "Pages", 689 },
+                 { "PublishedYear", 2003 },
+                 { "Category", "Thriller" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 56 },
-                 { "name", "A Game of Thrones" },
-                 { "author", "George R.R. Martin" },
-                 { "pages", 694 },
-                 { "published_year", 1996 },
-                 { "category", "Fantasy" }
+                 { "Id", 56 },
+                 { "Name", "A Game of Thrones" },
+                 { "Author", "George R.R. Martin" },
+                 { "Pages", 694 },
+                 { "PublishedYear", 1996 },
+                 { "Category", "Fantasy" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 57 },
-                 { "name", "The Girl with the Dragon Tattoo" },
-                 { "author", "Stieg Larsson" },
-                 { "pages", 465 },
-                 { "published_year", 2005 },
-                 { "category", "Mystery" }
+                 { "Id", 57 },
+                 { "Name", "The Girl with the Dragon Tattoo" },
+                 { "Author", "Stieg Larsson" },
+                 { "Pages", 465 },
+                 { "PublishedYear", 2005 },
+                 { "Category", "Mystery" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 58 },
-                 { "name", "The Hunger Games" },
-                 { "author", "Suzanne Collins" },
-                 { "pages", 374 },
-                 { "published_year", 2008 },
-                 { "category", "Dystopian" }
+                 { "Id", 58 },
+                 { "Name", "The Hunger Games" },
+                 { "Author", "Suzanne Collins" },
+                 { "Pages", 374 },
+                 { "PublishedYear", 2008 },
+                 { "Category", "Dystopian" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 59 },
-                 { "name", "Gone Girl" },
-                 { "author", "Gillian Flynn" },
-                 { "pages", 432 },
-                 { "published_year", 2012 },
-                 { "category", "Thriller" }
+                 { "Id", 59 },
+                 { "Name", "Gone Girl" },
+                 { "Author", "Gillian Flynn" },
+                 { "Pages", 432 },
+                 { "PublishedYear", 2012 },
+                 { "Category", "Thriller" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 60 },
-                 { "name", "The Book Thief" },
-                 { "author", "Markus Zusak" },
-                 { "pages", 552 },
-                 { "published_year", 2005 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 60 },
+                 { "Name", "The Book Thief" },
+                 { "Author", "Markus Zusak" },
+                 { "Pages", 552 },
+                 { "PublishedYear", 2005 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 61 },
-                 { "name", "The Kite Runner" },
-                 { "author", "Khaled Hosseini" },
-                 { "pages", 371 },
-                 { "published_year", 2003 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 61 },
+                 { "Name", "The Kite Runner" },
+                 { "Author", "Khaled Hosseini" },
+                 { "Pages", 371 },
+                 { "PublishedYear", 2003 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 62 },
-                 { "name", "The Girl on the Train" },
-                 { "author", "Paula Hawkins" },
-                 { "pages", 395 },
-                 { "published_year", 2015 },
-                 { "category", "Thriller" }
+                 { "Id", 62 },
+                 { "Name", "The Girl on the Train" },
+                 { "Author", "Paula Hawkins" },
+                 { "Pages", 395 },
+                 { "PublishedYear", 2015 },
+                 { "Category", "Thriller" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 63 },
-                 { "name", "Me Before You" },
-                 { "author", "Jojo Moyes" },
-                 { "pages", 369 },
-                 { "published_year", 2012 },
-                 { "category", "Romance" }
+                 { "Id", 63 },
+                 { "Name", "Me Before You" },
+                 { "Author", "Jojo Moyes" },
+                 { "Pages", 369 },
+                 { "PublishedYear", 2012 },
+                 { "Category", "Romance" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 64 },
-                 { "name", "The Night Circus" },
-                 { "author", "Erin Morgenstern" },
-                 { "pages", 387 },
-                 { "published_year", 2011 },
-                 { "category", "Fantasy" }
+                 { "Id", 64 },
+                 { "Name", "The Night Circus" },
+                 { "Author", "Erin Morgenstern" },
+                 { "Pages", 387 },
+                 { "PublishedYear", 2011 },
+                 { "Category", "Fantasy" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 65 },
-                 { "name", "The Help" },
-                 { "author", "Kathryn Stockett" },
-                 { "pages", 464 },
-                 { "published_year", 2009 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 65 },
+                 { "Name", "The Help" },
+                 { "Author", "Kathryn Stockett" },
+                 { "Pages", 464 },
+                 { "PublishedYear", 2009 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 66 },
-                 { "name", "The Road" },
-                 { "author", "Cormac McCarthy" },
-                 { "pages", 287 },
-                 { "published_year", 2006 },
-                 { "category", "Post-Apocalyptic" }
+                 { "Id", 66 },
+                 { "Name", "The Road" },
+                 { "Author", "Cormac McCarthy" },
+                 { "Pages", 287 },
+                 { "PublishedYear", 2006 },
+                 { "Category", "Post-Apocalyptic" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 67 },
-                 { "name", "The Secret History" },
-                 { "author", "Donna Tartt" },
-                 { "pages", 559 },
-                 { "published_year", 1992 },
-                 { "category", "Fiction" }
+                 { "Id", 67 },
+                 { "Name", "The Secret History" },
+                 { "Author", "Donna Tartt" },
+                 { "Pages", 559 },
+                 { "PublishedYear", 1992 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 68 },
-                 { "name", "Big Little Lies" },
-                 { "author", "Liane Moriarty" },
-                 { "pages", 460 },
-                 { "published_year", 2014 },
-                 { "category", "Fiction" }
+                 { "Id", 68 },
+                 { "Name", "Big Little Lies" },
+                 { "Author", "Liane Moriarty" },
+                 { "Pages", 460 },
+                 { "PublishedYear", 2014 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 69 },
-                 { "name", "The Maze Runner" },
-                 { "author", "James Dashner" },
-                 { "pages", 375 },
-                 { "published_year", 2009 },
-                 { "category", "Dystopian" }
+                 { "Id", 69 },
+                 { "Name", "The Maze Runner" },
+                 { "Author", "James Dashner" },
+                 { "Pages", 375 },
+                 { "PublishedYear", 2009 },
+                 { "Category", "Dystopian" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 70 },
-                 { "name", "Divergent" },
-                 { "author", "Veronica Roth" },
-                 { "pages", 487 },
-                 { "published_year", 2011 },
-                 { "category", "Dystopian" }
+                 { "Id", 70 },
+                 { "Name", "Divergent" },
+                 { "Author", "Veronica Roth" },
+                 { "Pages", 487 },
+                 { "PublishedYear", 2011 },
+                 { "Category", "Dystopian" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 71 },
-                 { "name", "The Lovely Bones" },
-                 { "author", "Alice Sebold" },
-                 { "pages", 328 },
-                 { "published_year", 2002 },
-                 { "category", "Fiction" }
+                 { "Id", 71 },
+                 { "Name", "The Lovely Bones" },
+                 { "Author", "Alice Sebold" },
+                 { "Pages", 328 },
+                 { "PublishedYear", 2002 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 72 },
-                 { "name", "The Time Traveler's Wife" },
-                 { "author", "Audrey Niffenegger" },
-                 { "pages", 518 },
-                 { "published_year", 2003 },
-                 { "category", "Science Fiction" }
+                 { "Id", 72 },
+                 { "Name", "The Time Traveler's Wife" },
+                 { "Author", "Audrey Niffenegger" },
+                 { "Pages", 518 },
+                 { "PublishedYear", 2003 },
+                 { "Category", "Science Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 73 },
-                 { "name", "Memoirs of a Geisha" },
-                 { "author", "Arthur Golden" },
-                 { "pages", 428 },
-                 { "published_year", 1997 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 73 },
+                 { "Name", "Memoirs of a Geisha" },
+                 { "Author", "Arthur Golden" },
+                 { "Pages", 428 },
+                 { "PublishedYear", 1997 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 74 },
-                 { "name", "The Perks of Being a Wallflower" },
-                 { "author", "Stephen Chbosky" },
-                 { "pages", 213 },
-                 { "published_year", 1999 },
-                 { "category", "Young Adult" }
+                 { "Id", 74 },
+                 { "Name", "The Perks of Being a Wallflower" },
+                 { "Author", "Stephen Chbosky" },
+                 { "Pages", 213 },
+                 { "PublishedYear", 1999 },
+                 { "Category", "Young Adult" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 75 },
-                 { "name", "The Giver" },
-                 { "author", "Lois Lowry" },
-                 { "pages", 240 },
-                 { "published_year", 1993 },
-                 { "category", "Dystopian" }
+                 { "Id", 75 },
+                 { "Name", "The Giver" },
+                 { "Author", "Lois Lowry" },
+                 { "Pages", 240 },
+                 { "PublishedYear", 1993 },
+                 { "Category", "Dystopian" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 76 },
-                 { "name", "Water for Elephants" },
-                 { "author", "Sara Gruen" },
-                 { "pages", 335 },
-                 { "published_year", 2006 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 76 },
+                 { "Name", "Water for Elephants" },
+                 { "Author", "Sara Gruen" },
+                 { "Pages", 335 },
+                 { "PublishedYear", 2006 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 77 },
-                 { "name", "The Poisonwood Bible" },
-                 { "author", "Barbara Kingsolver" },
-                 { "pages", 546 },
-                 { "published_year", 1998 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 77 },
+                 { "Name", "The Poisonwood Bible" },
+                 { "Author", "Barbara Kingsolver" },
+                 { "Pages", 546 },
+                 { "PublishedYear", 1998 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 78 },
-                 { "name", "Room" },
-                 { "author", "Emma Donoghue" },
-                 { "pages", 321 },
-                 { "published_year", 2010 },
-                 { "category", "Fiction" }
+                 { "Id", 78 },
+                 { "Name", "Room" },
+                 { "Author", "Emma Donoghue" },
+                 { "Pages", 321 },
+                 { "PublishedYear", 2010 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 79 },
-                 { "name", "A Thousand Splendid Suns" },
-                 { "author", "Khaled Hosseini" },
-                 { "pages", 372 },
-                 { "published_year", 2007 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 79 },
+                 { "Name", "A Thousand SplendId Suns" },
+                 { "Author", "Khaled Hosseini" },
+                 { "Pages", 372 },
+                 { "PublishedYear", 2007 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 80 },
-                 { "name", "Shantaram" },
-                 { "author", "Gregory David Roberts" },
-                 { "pages", 936 },
-                 { "published_year", 2003 },
-                 { "category", "Fiction" }
+                 { "Id", 80 },
+                 { "Name", "Shantaram" },
+                 { "Author", "Gregory DavId Roberts" },
+                 { "Pages", 936 },
+                 { "PublishedYear", 2003 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 81 },
-                 { "name", "The Stand" },
-                 { "author", "Stephen King" },
-                 { "pages", 1153 },
-                 { "published_year", 1978 },
-                 { "category", "Horror" }
+                 { "Id", 81 },
+                 { "Name", "The Stand" },
+                 { "Author", "Stephen King" },
+                 { "Pages", 1153 },
+                 { "PublishedYear", 1978 },
+                 { "Category", "Horror" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 82 },
-                 { "name", "The Goldfinch" },
-                 { "author", "Donna Tartt" },
-                 { "pages", 771 },
-                 { "published_year", 2013 },
-                 { "category", "Fiction" }
+                 { "Id", 82 },
+                 { "Name", "The Goldfinch" },
+                 { "Author", "Donna Tartt" },
+                 { "Pages", 771 },
+                 { "PublishedYear", 2013 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 83 },
-                 { "name", "The Shadow of the Wind" },
-                 { "author", "Carlos Ruiz Zafón" },
-                 { "pages", 487 },
-                 { "published_year", 2001 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 83 },
+                 { "Name", "The Shadow of the Wind" },
+                 { "Author", "Carlos Ruiz Zafón" },
+                 { "Pages", 487 },
+                 { "PublishedYear", 2001 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 84 },
-                 { "name", "Cloud Atlas" },
-                 { "author", "David Mitchell" },
-                 { "pages", 509 },
-                 { "published_year", 2004 },
-                 { "category", "Science Fiction" }
+                 { "Id", 84 },
+                 { "Name", "Cloud Atlas" },
+                 { "Author", "DavId Mitchell" },
+                 { "Pages", 509 },
+                 { "PublishedYear", 2004 },
+                 { "Category", "Science Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 85 },
-                 { "name", "The Nightingale" },
-                 { "author", "Kristin Hannah" },
-                 { "pages", 440 },
-                 { "published_year", 2015 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 85 },
+                 { "Name", "The Nightingale" },
+                 { "Author", "Kristin Hannah" },
+                 { "Pages", 440 },
+                 { "PublishedYear", 2015 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 86 },
-                 { "name", "The Secret Life of Bees" },
-                 { "author", "Sue Monk Kidd" },
-                 { "pages", 336 },
-                 { "published_year", 2001 },
-                 { "category", "Fiction" }
+                 { "Id", 86 },
+                 { "Name", "The Secret Life of Bees" },
+                 { "Author", "Sue Monk KIdd" },
+                 { "Pages", 336 },
+                 { "PublishedYear", 2001 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 87 },
-                 { "name", "The Light Between Oceans" },
-                 { "author", "M.L. Stedman" },
-                 { "pages", 362 },
-                 { "published_year", 2012 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 87 },
+                 { "Name", "The Light Between Oceans" },
+                 { "Author", "M.L. Stedman" },
+                 { "Pages", 362 },
+                 { "PublishedYear", 2012 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 88 },
-                 { "name", "The Guernsey Literary and Potato Peel Pie Society" },
-                 { "author", "Mary Ann Shaffer & Annie Barrows" },
-                 { "pages", 274 },
-                 { "published_year", 2008 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 88 },
+                 { "Name", "The Guernsey Literary and Potato Peel Pie Society" },
+                 { "Author", "Mary Ann Shaffer & Annie Barrows" },
+                 { "Pages", 274 },
+                 { "PublishedYear", 2008 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 89 },
-                 { "name", "The Rosie Project" },
-                 { "author", "Graeme Simsion" },
-                 { "pages", 295 },
-                 { "published_year", 2013 },
-                 { "category", "Romance" }
+                 { "Id", 89 },
+                 { "Name", "The Rosie Project" },
+                 { "Author", "Graeme Simsion" },
+                 { "Pages", 295 },
+                 { "PublishedYear", 2013 },
+                 { "Category", "Romance" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 90 },
-                 { "name", "All the Light We Cannot See" },
-                 { "author", "Anthony Doerr" },
-                 { "pages", 531 },
-                 { "published_year", 2014 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 90 },
+                 { "Name", "All the Light We Cannot See" },
+                 { "Author", "Anthony Doerr" },
+                 { "Pages", 531 },
+                 { "PublishedYear", 2014 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 91 },
-                 { "name", "The Hate U Give" },
-                 { "author", "Angie Thomas" },
-                 { "pages", 444 },
-                 { "published_year", 2017 },
-                 { "category", "Young Adult" }
+                 { "Id", 91 },
+                 { "Name", "The Hate U Give" },
+                 { "Author", "Angie Thomas" },
+                 { "Pages", 444 },
+                 { "PublishedYear", 2017 },
+                 { "Category", "Young Adult" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 92 },
-                 { "name", "Educated" },
-                 { "author", "Tara Westover" },
-                 { "pages", 334 },
-                 { "published_year", 2018 },
-                 { "category", "Memoir" }
+                 { "Id", 92 },
+                 { "Name", "Educated" },
+                 { "Author", "Tara Westover" },
+                 { "Pages", 334 },
+                 { "PublishedYear", 2018 },
+                 { "Category", "Memoir" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 93 },
-                 { "name", "Where the Crawdads Sing" },
-                 { "author", "Delia Owens" },
-                 { "pages", 370 },
-                 { "published_year", 2018 },
-                 { "category", "Fiction" }
+                 { "Id", 93 },
+                 { "Name", "Where the Crawdads Sing" },
+                 { "Author", "Delia Owens" },
+                 { "Pages", 370 },
+                 { "PublishedYear", 2018 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 94 },
-                 { "name", "Becoming" },
-                 { "author", "Michelle Obama" },
-                 { "pages", 426 },
-                 { "published_year", 2018 },
-                 { "category", "Memoir" }
+                 { "Id", 94 },
+                 { "Name", "Becoming" },
+                 { "Author", "Michelle Obama" },
+                 { "Pages", 426 },
+                 { "PublishedYear", 2018 },
+                 { "Category", "Memoir" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 95 },
-                 { "name", "Little Fires Everywhere" },
-                 { "author", "Celeste Ng" },
-                 { "pages", 338 },
-                 { "published_year", 2017 },
-                 { "category", "Fiction" }
+                 { "Id", 95 },
+                 { "Name", "Little Fires Everywhere" },
+                 { "Author", "Celeste Ng" },
+                 { "Pages", 338 },
+                 { "PublishedYear", 2017 },
+                 { "Category", "Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 96 },
-                 { "name", "Circe" },
-                 { "author", "Madeline Miller" },
-                 { "pages", 393 },
-                 { "published_year", 2018 },
-                 { "category", "Fantasy" }
+                 { "Id", 96 },
+                 { "Name", "Circe" },
+                 { "Author", "Madeline Miller" },
+                 { "Pages", 393 },
+                 { "PublishedYear", 2018 },
+                 { "Category", "Fantasy" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 97 },
-                 { "name", "The Silent Patient" },
-                 { "author", "Alex Michaelides" },
-                 { "pages", 325 },
-                 { "published_year", 2019 },
-                 { "category", "Thriller" }
+                 { "Id", 97 },
+                 { "Name", "The Silent Patient" },
+                 { "Author", "Alex MichaelIdes" },
+                 { "Pages", 325 },
+                 { "PublishedYear", 2019 },
+                 { "Category", "Thriller" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 98 },
-                 { "name", "The Night Watchman" },
-                 { "author", "Louise Erdrich" },
-                 { "pages", 464 },
-                 { "published_year", 2020 },
-                 { "category", "Historical Fiction" }
+                 { "Id", 98 },
+                 { "Name", "The Night Watchman" },
+                 { "Author", "Louise Erdrich" },
+                 { "Pages", 464 },
+                 { "PublishedYear", 2020 },
+                 { "Category", "Historical Fiction" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 99 },
-                 { "name", "The Invisible Life of Addie LaRue" },
-                 { "author", "V.E. Schwab" },
-                 { "pages", 442 },
-                 { "published_year", 2020 },
-                 { "category", "Fantasy" }
+                 { "Id", 99 },
+                 { "Name", "The Invisible Life of Addie LaRue" },
+                 { "Author", "V.E. Schwab" },
+                 { "Pages", 442 },
+                 { "PublishedYear", 2020 },
+                 { "Category", "Fantasy" }
              },
              new Dictionary<string, object>
              {
-                 { "id", 100 },
-                 { "name", "The Vanishing Half" },
-                 { "author", "Brit Bennett" },
-                 { "pages", 352 },
-                 { "published_year", 2020 },
-                 { "category", "Fiction" }
+                 { "Id", 100 },
+                 { "Name", "The Vanishing Half" },
+                 { "Author", "Brit Bennett" },
+                 { "Pages", 352 },
+                 { "PublishedYear", 2020 },
+                 { "Category", "Fiction" }
              }
         };
 
