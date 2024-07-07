@@ -19,7 +19,7 @@ namespace LibraryManagement.Model
         {
             UserId = userId;
             BookId = bookId;
-            ReturnDate = new DateTime().AddDays(MAX_DAY).ToString();
+            ReturnDate = DateTime.Now.AddDays(MAX_DAY).ToString();
         }
     }
 }

@@ -13,7 +13,6 @@ namespace LibraryManagement.Core
     {
         private List<User> users = new List<User>();
 
-        private static bool isLoaded = false;
         public UserController() 
         {
             this.Load();
@@ -26,11 +25,7 @@ namespace LibraryManagement.Core
 
         private void Load()
         {
-            if (isLoaded)
-            {
-                return;
-            }
-
+            
             Dictionary<string, object>[] userList = UserList.userList;
 
             foreach (var user in userList)
@@ -39,7 +34,12 @@ namespace LibraryManagement.Core
                 User u = Helper.DictToObj<User>(user);
                 users.Add(u);
             }
-            isLoaded = true;
+           
+        }
+
+        public User? GetById(int id)
+        {
+            return users.Find((u) => u.Id == id);
         }
     }
 }

@@ -37,6 +37,7 @@ namespace LibraryManagement.Views
                 Console.WriteLine("(5)  Sort Book By Name(ASC)");
                 Console.WriteLine("(6)  Sort Book By Publication Date(ASC)");
                 Console.WriteLine("(7)  View All Users");
+                Console.WriteLine("(8)  View Issued Book List");
                 Console.WriteLine("(0)  Exit Admin Console (0 Or Any Other Key)");
                 string ch = Console.ReadLine();
                 this.HandleChoice(ch);
@@ -242,9 +243,22 @@ namespace LibraryManagement.Views
             Console.Clear();
             Console.WriteLine("Enter Book Id: ");
             int bId = Int32.Parse(Console.ReadLine());
+            if (!ValidationHelper.ValidateBookId(bId))
+            {
+                Console.WriteLine($"Book with id {bId} does not exist");
+                this.WishToContinue();
+                return;
+            }
             Console.WriteLine("Enter User Id: ");
+            
             int uId = Int32.Parse(Console.ReadLine());
-            bool succ = LibraryControlller.IssueBook(bId, uId);
+            if (!ValidationHelper.ValidateUserId(uId))
+            {
+                Console.WriteLine($"User with id {uId} does not exist");
+                this.WishToContinue();
+                return;
+            }
+            bool succ = LibraryControlller.IssueBook(uId, bId);
             if (succ)
             {
                 Console.WriteLine("Book Issued Successfully");
