@@ -12,7 +12,9 @@ namespace LibraryManagement.Core
 {
     public class BookController
     {
-        private List<Book> books = new List<Book>();
+        private static List<Book> books = new List<Book>();
+
+        private static bool isLoaded = false;
 
         public BookController()
         {
@@ -23,7 +25,13 @@ namespace LibraryManagement.Core
 
         private void Load()
         {
+            if(isLoaded)
+            {
+                Console.WriteLine("Loaded Already");
+                return;
+            }
 
+            
             Dictionary<string, object>[] bookList = BookList.bookList;
 
             foreach (var book in bookList)
@@ -32,6 +40,8 @@ namespace LibraryManagement.Core
                 Book bookObj = Helper.DictToObj<Book>(book);
                 books.Add(bookObj);
             }
+
+            isLoaded = true;
         }
 
         public Book? GetBookById(int id)

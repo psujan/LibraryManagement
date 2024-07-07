@@ -8,12 +8,18 @@ namespace LibraryManagement.Model
 {
     public class UsersBook
     {
+        private static double MAX_DAY = 3;
         public int UserId { get; set; }
 
         public int BookId { get; set; }
 
         public string ReturnDate {  get; set; }
 
-        public double FineAmount { get; set; }
+        public UsersBook(int userId, int bookId)
+        {
+            UserId = userId;
+            BookId = bookId;
+            ReturnDate = new DateTime().AddDays(MAX_DAY).ToString();
+        }
     }
 }

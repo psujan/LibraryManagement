@@ -13,38 +13,50 @@ namespace LibraryManagement.Views
     public class AdminMenu
     {
         
-        public BookController BookController;
+        private BookController BookController;
+
+        private UserController UserController;
+
+        private LibraryControlller LibraryControlller;
 
         public AdminMenu() { 
             this.BookController = new BookController();
+            this.UserController = new UserController();
+            this.LibraryControlller = new LibraryControlller();
         }
 
         public void InitAdminMenu()
         {
-            Console.WriteLine("Welcome To Admin Console");
-            Console.WriteLine("(1)  Issue Book To User");
-            Console.WriteLine("(2)  View All Books");
-            Console.WriteLine("(3)  Search Book By Id ");
-            Console.WriteLine("(4)  Filter Book By Category");
-            Console.WriteLine("(5)  Sort Book By Name(ASC)");
-            Console.WriteLine("(6)  Sort Book By Publication Date(ASC)");
-            Console.WriteLine("(7)  View All Users");
-            Console.WriteLine("(0) Exit Admin Console (0 Or Any Other Key)");
-            string ch =  Console.ReadLine();
-            this.handleChoice(ch);
+            try
+            {
+                Console.WriteLine("Welcome To Admin Console");
+                Console.WriteLine("(1)  Issue Book To User");
+                Console.WriteLine("(2)  View All Books");
+                Console.WriteLine("(3)  Search Book By Id ");
+                Console.WriteLine("(4)  Filter Book By Category");
+                Console.WriteLine("(5)  Sort Book By Name(ASC)");
+                Console.WriteLine("(6)  Sort Book By Publication Date(ASC)");
+                Console.WriteLine("(7)  View All Users");
+                Console.WriteLine("(0)  Exit Admin Console (0 Or Any Other Key)");
+                string ch = Console.ReadLine();
+                this.HandleChoice(ch);
+            }catch(Exception e)
+            {
+                Console.WriteLine("Error :" + e.Message);
+            }
 
         }
 
-        private  void handleChoice(string ch)
+        private  void HandleChoice(string ch)
         {
            
             switch(ch)
             {
                 case "0":
-                    //Exit App
+                    Environment.Exit(0);
                     break;
                 case "1":
-                    //Issue Book
+                    this.IssueBook();
                     break;
                 case "2":
                     this.ListBooks();
@@ -62,9 +74,11 @@ namespace LibraryManagement.Views
                     this.SortBooksByPublicationYear();
                     break;
                 case "7":
-                    //ListUsers();
+                    this.ListUsers();
                     break;
                 default:
+                    Console.WriteLine("No Matching Case");
+                    this.WishToContinue();
                     break;
             }
         }
@@ -125,19 +139,6 @@ namespace LibraryManagement.Views
             this.DisplayBooks(BookController.SortBookByName());
         }
 
-        public static void ListUsers(UserController userController)
-        {
-            var items = userController.Index();
-            if (items.Length == 0)
-            {
-                Console.WriteLine("No Records Found");
-                return;
-            }
-            foreach (var item in items)
-            {
-
-            }
-        }
 
         public void WishToContinue()
         {
@@ -150,7 +151,10 @@ namespace LibraryManagement.Views
                 Console.Clear();
                 this.InitAdminMenu();
             }
-
+            else
+            {
+                Environment.Exit(0);
+            }
             return;
         }
 
@@ -206,6 +210,50 @@ namespace LibraryManagement.Views
             {
                 Console.WriteLine("Error: " + ex.Message);
             }
+        }
+
+        public void ListUsers()
+        {
+            this.DisplayUsers(UserController.Index());
+        }
+
+        public void DisplayUsers(List<User> users)
+        {
+            if(users.Count == 0)
+            {
+                Console.WriteLine("No Record Found");
+                this.WishToContinue();
+                return;
+            }
+
+            Console.WriteLine($"{"Id",-7}{"Name",-30}{"Email"}");
+            Console.WriteLine("---------------------------------------------------------------");
+            foreach (var user in users)
+            {
+                Console.WriteLine($"{user.Id,-7}{Helper.TruncateWithEllispsis(user.Name, 25),-30}{user.Email}");
+            }
+
+            this.WishToContinue();
+
+        }
+
+        public void IssueBook()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter Book Id: ");
+            int bId = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Enter User Id: ");
+            int uId = Int32.Parse(Console.ReadLine());
+            bool succ = LibraryControlller.IssueBook(bId, uId);
+            if (succ)
+            {
+                Console.WriteLine("Book Issued Successfully");
+            }
+            else
+            {
+                Console.WriteLine("Failed To Issue Book");
+            }
+            this.WishToContinue();
         }
     }
 }
