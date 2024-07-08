@@ -77,6 +77,9 @@ namespace LibraryManagement.Views
                 case "7":
                     this.ListUsers();
                     break;
+                case "8":
+                    this.ListIssuedBooks();
+                    break;
                 default:
                     Console.WriteLine("No Matching Case");
                     this.WishToContinue();
@@ -268,6 +271,16 @@ namespace LibraryManagement.Views
                 Console.WriteLine("Failed To Issue Book");
             }
             this.WishToContinue();
+        }
+
+        public void ListIssuedBooks()
+        {
+            List<UsersBook> items = LibraryControlller.ListIssuedBooks();
+            foreach (UsersBook item in items)
+            {
+                Console.WriteLine(item);
+            }
+            this.WishToContinue() ;
         }
     }
 }

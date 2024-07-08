@@ -14,12 +14,16 @@ namespace LibraryManagement.Core
         
         public LibraryControlller()
         {
-            this.Load();
+             this.Load();
         }
 
         private void Load()
         {
-
+            var userBooks = FileHelper.GetIssuedBookList();
+            if (userBooks != null)
+            {
+                this.UserBooks = userBooks;
+            }
         }
 
         private bool Save() 
@@ -37,6 +41,11 @@ namespace LibraryManagement.Core
         public void CalculateFineAmount(int userId)
         {
 
+        }
+
+        public List<UsersBook> ListIssuedBooks()
+        {
+            return this.UserBooks;
         }
 
 

@@ -29,9 +29,19 @@ namespace LibraryManagement.Core.Helpers
             }
         }
 
-        public static void GetIssuedBookList()
+        public static List<UsersBook>? GetIssuedBookList()
         {
-
+            try
+            {
+                string json = File.ReadAllText(UserBookFile);
+                var result = JsonSerializer.Deserialize<List<UsersBook>>(json);
+                return result;
+            }
+            catch (Exception ex) 
+            { 
+                Console.WriteLine("Error: " + ex.Message);
+                return null;
+            }
         }
     }
 }

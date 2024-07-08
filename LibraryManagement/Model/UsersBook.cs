@@ -21,5 +21,11 @@ namespace LibraryManagement.Model
             BookId = bookId;
             ReturnDate = DateTime.Now.AddDays(MAX_DAY).ToString();
         }
+
+        public override string ToString()
+        {
+
+            return $"User Id : {UserId} \t Book Id: {BookId} \t Return Date: ${ReturnDate}";
+        }
     }
 }
