@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -38,6 +39,7 @@ namespace LibraryManagement.Views
                 Console.WriteLine("(6)  Sort Book By Publication Date(ASC)");
                 Console.WriteLine("(7)  View All Users");
                 Console.WriteLine("(8)  View Issued Book List");
+                Console.WriteLine("(9)  Generate Individual User Report");
                 Console.WriteLine("(0)  Exit Admin Console (0 Or Any Other Key)");
                 string ch = Console.ReadLine();
                 this.HandleChoice(ch);
@@ -79,6 +81,9 @@ namespace LibraryManagement.Views
                     break;
                 case "8":
                     this.ListIssuedBooks();
+                    break;
+                case "9":
+                    this.GenerateUserReport();
                     break;
                 default:
                     Console.WriteLine("No Matching Case");
@@ -241,6 +246,14 @@ namespace LibraryManagement.Views
 
         }
 
+        /*
+         * To Issue A Book : Criteria
+         * Valid User Id
+         * Valid Book Id
+         * 0 Prev Fine Amount
+         * Shouldn't Have Already Issued A Same Book
+         * Within The Limit
+         */
         public void IssueBook()
         {
             Console.Clear();
@@ -261,6 +274,14 @@ namespace LibraryManagement.Views
                 this.WishToContinue();
                 return;
             }
+
+            if (ValidationHelper.CheckBookLimit(uId))
+            {
+                Console.WriteLine($"Max limit for issue is {ValidationHelper.MAX_BORROW_LIMIT} books");
+                this.WishToContinue();
+                return;
+            }
+
             bool succ = LibraryControlller.IssueBook(uId, bId);
             if (succ)
             {
@@ -281,6 +302,34 @@ namespace LibraryManagement.Views
                 Console.WriteLine(item);
             }
             this.WishToContinue() ;
+        }
+
+        public void GenerateUserReport()
+        {
+            Console.WriteLine("Enter User Id: ");
+            int id = Int32.Parse(Console.ReadLine());
+            if(!ValidationHelper.ValidateUserId(id))
+            {
+                Console.WriteLine($"User with id {id} does not exist");
+                this.WishToContinue();
+                return;
+            }
+            var report =  LibraryControlller.GetUserReport(id);
+            if (report.Count == 0) 
+            {
+                Console.WriteLine($"User with Id {id} hasn't borrowed any books");
+            }
+            Console.WriteLine("\n");
+            foreach (var item in report)
+            {
+                foreach(var(key, value) in item)
+                {
+                    Console.WriteLine($"{key , -35}{value}");
+                }
+                Console.WriteLine("-----------------------------------------------------------");
+            }
+            this.WishToContinue();
+            
         }
     }
 }

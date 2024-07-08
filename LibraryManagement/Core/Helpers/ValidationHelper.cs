@@ -9,6 +9,7 @@ namespace LibraryManagement.Core.Helpers
 {
     public class ValidationHelper
     {
+        public static readonly int MAX_BORROW_LIMIT = 3;
         public static bool ValidateUserId(int id)
         {
             var item = new UserController().GetById(id);
@@ -19,6 +20,13 @@ namespace LibraryManagement.Core.Helpers
         {
             var item = new BookController().GetBookById(id);
             return item == null ? false : true;
+        }
+
+        public static bool CheckBookLimit(int id)
+        {
+            var items = new LibraryControlller().ListIssuedBooks();
+            var borrowedBooks = items.FindAll((x)=>x.UserId == id);
+            return borrowedBooks.Count >= MAX_BORROW_LIMIT;
         }
     }
 }
