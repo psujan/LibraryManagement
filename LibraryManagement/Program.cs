@@ -3,4 +3,5 @@ using LibraryManagement.Model;
 using LibraryManagement.Views;
 
 
-MainMenu.initMenu();
+MainMenu appConsole = new MainMenu();
+appConsole.InitMenu();

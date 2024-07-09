@@ -1,6 +1,8 @@
-﻿using System;
+﻿using LibraryManagement.Core.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,10 +10,10 @@ namespace LibraryManagement.Views
 {
     public class MainMenu
     {
-        public static void initMenu()
+        public static int AUTH_USER_ID;
+        public  void InitMenu()
         {
             bool show = true;
-
             while (show)
             {
                 Console.WriteLine("Please Choose Any One");
@@ -25,7 +27,7 @@ namespace LibraryManagement.Views
                         show = false;
                         break;
                     case "2":
-                        InitUserMenu();
+                        AuthUser();
                         show = false;
                         break;
                     default:
@@ -47,9 +49,45 @@ namespace LibraryManagement.Views
             am.InitAdminMenu();
         }
 
-        public static void InitUserMenu()
+        public  void AuthUser()
         {
             Console.Clear();
+            Console.WriteLine("Enter User Id: ");
+            int id = Int32.Parse(Console.ReadLine());
+
+            //validate user id
+            if (!ValidationHelper.ValidateUserId(id)) {
+                Console.WriteLine($"User with id {id} doesn;t exist");
+                this.WishToContinue();
+                return;
+            }
+
+            // TODO
+            //validate user email
+            // if valid email then prompt to user menu
+            AUTH_USER_ID = id;
+            Console.Clear() ;
+            UserMenu userMenu = new UserMenu();
+            userMenu.InitUserMenu();
+
+        }
+
+        public void WishToContinue()
+        {
+            Console.WriteLine("\nDo you want to continue ? (y/ n): ");
+            char ch = Char.Parse(Console.ReadLine());
+
+
+            if (ch == 'y' || ch == 'Y')
+            {
+                Console.Clear();
+                InitMenu();
+            }
+            else
+            {
+                Environment.Exit(0);
+            }
+            return;
         }
 
     }
