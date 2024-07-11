@@ -13,14 +13,15 @@ namespace LibraryManagement.Views
 {
     public class AdminMenu
     {
-        
+
         private BookController BookController;
 
         private UserController UserController;
 
         private LibraryControlller LibraryControlller;
 
-        public AdminMenu() { 
+        public AdminMenu()
+        {
             this.BookController = new BookController();
             this.UserController = new UserController();
             this.LibraryControlller = new LibraryControlller();
@@ -43,17 +44,18 @@ namespace LibraryManagement.Views
                 Console.WriteLine("(0)  Exit Admin Console (0 Or Any Other Key)");
                 string ch = Console.ReadLine();
                 this.HandleChoice(ch);
-            }catch(Exception e)
+            }
+            catch (Exception e)
             {
                 Console.WriteLine("Error :" + e.Message);
             }
 
         }
 
-        private  void HandleChoice(string ch)
+        private void HandleChoice(string ch)
         {
-           
-            switch(ch)
+
+            switch (ch)
             {
                 case "0":
                     Environment.Exit(0);
@@ -92,11 +94,11 @@ namespace LibraryManagement.Views
             }
         }
 
-        public  void ListBooks()
+        public void ListBooks()
         {
-            
+
             var items = BookController.Index();
-            if(items.Count ==  0)
+            if (items.Count == 0)
             {
                 Console.WriteLine("No records found");
                 return;
@@ -114,7 +116,7 @@ namespace LibraryManagement.Views
             {
                 int bId = Int32.Parse(id);
                 this.FindBookById(bId);
-                
+
             }
             catch (FormatException)
             {
@@ -124,10 +126,10 @@ namespace LibraryManagement.Views
 
         }
 
-        public  void FindBookById(int id)
+        public void FindBookById(int id)
         {
             Book? bk = BookController.GetBookById(id);
-            if(bk == null)
+            if (bk == null)
             {
                 Console.WriteLine("No Record Found");
                 this.WishToContinue();
@@ -153,9 +155,9 @@ namespace LibraryManagement.Views
         {
             Console.WriteLine("\nDo you want to continue ? (y/ n): ");
             char ch = Char.Parse(Console.ReadLine());
-            
 
-            if(ch == 'y' || ch == 'Y')
+
+            if (ch == 'y' || ch == 'Y')
             {
                 Console.Clear();
                 this.InitAdminMenu();
@@ -169,18 +171,18 @@ namespace LibraryManagement.Views
 
         public void DisplayBooks(List<Book> items)
         {
-            if(items == null || items.Count == 0)
+            if (items == null || items.Count == 0)
             {
                 Console.WriteLine("No Record Found");
                 this.WishToContinue();
                 return;
             }
 
-            Console.WriteLine($"{"Id",-10}{"Name",-40}{"Author",-25}{"Category" , -15}{"Pub Year",-10}{"Pages"}");
+            Console.WriteLine($"{"Id",-10}{"Name",-40}{"Author",-25}{"Category",-15}{"Pub Year",-10}{"Pages"}");
             Console.WriteLine("---------------------------------------------------------------------------------------------------------");
             foreach (var item in items)
             {
-                Console.WriteLine($"{item.Id,-10}{Helper.TruncateWithEllispsis(item.Name),-40}{Helper.TruncateWithEllispsis(item.Author, 20),-25}{item.Category , -15}{item.PublishedYear,-10}{item.Pages}");
+                Console.WriteLine($"{item.Id,-10}{Helper.TruncateWithEllispsis(item.Name),-40}{Helper.TruncateWithEllispsis(item.Author, 20),-25}{item.Category,-15}{item.PublishedYear,-10}{item.Pages}");
             }
             this.WishToContinue();
         }
@@ -189,7 +191,7 @@ namespace LibraryManagement.Views
         {
             var categories = BookController.GetCategories();
 
-            if(categories.Count == 0)
+            if (categories.Count == 0)
             {
                 Console.WriteLine("No Categories Found");
                 this.WishToContinue();
@@ -199,12 +201,12 @@ namespace LibraryManagement.Views
             int i = 0;
             foreach (var category in categories)
             {
-                Console.WriteLine($"{++i , -10}{category}");
+                Console.WriteLine($"{++i,-10}{category}");
             }
             try
             {
                 string ch = Console.ReadLine();
-                if(categories.Any(c => c.ToLower() == ch.ToLower()))
+                if (categories.Any(c => c.ToLower() == ch.ToLower()))
                 {
                     this.DisplayBooks(BookController.FindBookByCategory(ch));
                 }
@@ -228,7 +230,7 @@ namespace LibraryManagement.Views
 
         public void DisplayUsers(List<User> users)
         {
-            if(users.Count == 0)
+            if (users.Count == 0)
             {
                 Console.WriteLine("No Record Found");
                 this.WishToContinue();
@@ -266,7 +268,7 @@ namespace LibraryManagement.Views
                 return;
             }
             Console.WriteLine("Enter User Id: ");
-            
+
             int uId = Int32.Parse(Console.ReadLine());
             if (!ValidationHelper.ValidateUserId(uId))
             {
@@ -301,35 +303,35 @@ namespace LibraryManagement.Views
             {
                 Console.WriteLine(item);
             }
-            this.WishToContinue() ;
+            this.WishToContinue();
         }
 
         public void GenerateUserReport()
         {
             Console.WriteLine("Enter User Id: ");
             int id = Int32.Parse(Console.ReadLine());
-            if(!ValidationHelper.ValidateUserId(id))
+            if (!ValidationHelper.ValidateUserId(id))
             {
                 Console.WriteLine($"User with id {id} does not exist");
                 this.WishToContinue();
                 return;
             }
-            var report =  LibraryControlller.GetUserReport(id);
-            if (report.Count == 0) 
+            var report = LibraryControlller.GetUserReport(id);
+            if (report.Count == 0)
             {
                 Console.WriteLine($"User with Id {id} hasn't borrowed any books");
             }
             Console.WriteLine("\n");
             foreach (var item in report)
             {
-                foreach(var(key, value) in item)
+                foreach (var (key, value) in item)
                 {
-                    Console.WriteLine($"{key , -35}{value}");
+                    Console.WriteLine($"{key,-35}{value}");
                 }
                 Console.WriteLine("-----------------------------------------------------------");
             }
             this.WishToContinue();
-            
+
         }
     }
 }
