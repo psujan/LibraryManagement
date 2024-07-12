@@ -40,9 +40,11 @@ namespace LibraryManagement.Core
             return this.Save();
         }
 
-        public void CalculateFineAmount(int userId)
+        public double CalculateFineAmount(int userId)
         {
-
+            var report = this.GetUserReport(userId);
+            double sum =  report.Sum((r) => (int)r["Fine Amount"]);
+            return sum;
         }
 
         public List<UsersBook> ListIssuedBooks()
@@ -60,7 +62,7 @@ namespace LibraryManagement.Core
                 {
                     {"Book Id" , item.BookId },
                     {"Return Date" , item.ReturnDate },
-                    {"Fine Amount" , DateTime.Today > DateTime.Parse(item.ReturnDate) ? PER_BOOK_FINE : 0 } 
+                    {"Fine Amount" , (DateTime.Today - DateTime.Parse(item.ReturnDate)).Days * PER_BOOK_FINE} 
                 });
             }
             return report;

@@ -328,6 +328,8 @@ namespace LibraryManagement.Views
                 }
                 Console.WriteLine("-----------------------------------------------------------");
             }
+
+            Console.WriteLine("Total Fine Amount : " + LibraryControlller.CalculateFineAmount(id));
             this.WishToContinue();
             
         }
