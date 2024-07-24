@@ -10,38 +10,32 @@ namespace LibraryManagement.Core.Helpers
 {
     public class FileHelper
     {
-        private static readonly string UserBookFile = "C:\\Users\\User\\source\\repos\\LibraryManagement\\LibraryManagement\\userbook.json";
+        public static readonly string UserBookFile = "C:\\Users\\User\\source\\repos\\LibraryManagement\\LibraryManagement\\userbook.json";
 
-        public static bool SaveIssuedBookList(List<UsersBook> issuedBooks)
+        
+        public static bool SaveListToJson<T>(List<T> listItems , string filePath)
         {
             bool res = false;
             try
             {
-                string json = JsonSerializer.Serialize(issuedBooks);
-                File.WriteAllText(UserBookFile, json);
+                string json = JsonSerializer.Serialize(listItems);
+                File.WriteAllText(filePath, json);
                 res = true;
-                return res;
+
             }
-            catch (Exception ex) 
+            catch (Exception ex)
             {
                 Console.WriteLine("Error: " + ex.Message);
-                return res;
+                res = false;
             }
+            return res;
         }
 
-        public static List<UsersBook>? GetIssuedBookList()
+        public static List<T>? JsonToList<T>(string filePath)
         {
-            try
-            {
-                string json = File.ReadAllText(UserBookFile);
-                var result = JsonSerializer.Deserialize<List<UsersBook>>(json);
-                return result;
-            }
-            catch (Exception ex) 
-            { 
-                Console.WriteLine("Error: " + ex.Message);
-                return null;
-            }
+            string json = File.ReadAllText(filePath);
+            var result = JsonSerializer.Deserialize<List<T>>(json);
+            return result;
         }
     }
 }

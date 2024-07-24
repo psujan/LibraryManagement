@@ -21,7 +21,7 @@ namespace LibraryManagement.Core
 
         private void Load()
         {
-            var userBooks = FileHelper.GetIssuedBookList();
+            var userBooks = FileHelper.JsonToList<UsersBook>(FileHelper.UserBookFile);
             if (userBooks != null)
             {
                 this.UserBooks = userBooks;
@@ -30,7 +30,8 @@ namespace LibraryManagement.Core
 
         private bool Save() 
         {
-            return FileHelper.SaveIssuedBookList(this.UserBooks);
+            // return FileHelper.SaveIssuedBookList(this.UserBooks);
+            return FileHelper.SaveListToJson<UsersBook>(this.UserBooks, FileHelper.UserBookFile);
         }
 
 
