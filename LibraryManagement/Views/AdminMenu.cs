@@ -261,6 +261,8 @@ namespace LibraryManagement.Views
             Console.Clear();
             Console.WriteLine("Enter Book Id: ");
             int bId = Int32.Parse(Console.ReadLine());
+
+            // check if the book id is valid
             if (!ValidationHelper.ValidateBookId(bId))
             {
                 Console.WriteLine($"Book with id {bId} does not exist");
@@ -270,6 +272,8 @@ namespace LibraryManagement.Views
             Console.WriteLine("Enter User Id: ");
 
             int uId = Int32.Parse(Console.ReadLine());
+
+            //check if user id is valid
             if (!ValidationHelper.ValidateUserId(uId))
             {
                 Console.WriteLine($"User with id {uId} does not exist");
@@ -277,9 +281,28 @@ namespace LibraryManagement.Views
                 return;
             }
 
+            //check if the same book is already issued to the same user
+            if (ValidationHelper.IsIssued(bId , uId))
+            {
+                Console.WriteLine($"User has already borrowed the same book");
+                this.WishToContinue();
+                return;
+            }
+
+
+            //check if user has borrowed book within the limit allowed
             if (ValidationHelper.CheckBookLimit(uId))
             {
                 Console.WriteLine($"Max limit for issue is {ValidationHelper.MAX_BORROW_LIMIT} books");
+                this.WishToContinue();
+                return;
+            }
+
+            // check if user has prev library find
+            double fine = LibraryControlller.CalculateFineAmount(uId);
+            if (fine > 0)
+            {
+                Console.WriteLine("User has a fine amount of : $" + fine);
                 this.WishToContinue();
                 return;
             }
@@ -299,6 +322,14 @@ namespace LibraryManagement.Views
         public void ListIssuedBooks()
         {
             List<UsersBook> items = LibraryControlller.ListIssuedBooks();
+
+            if(items.Count == 0)
+            {
+                Console.WriteLine("No records found");
+                this.WishToContinue();
+                return;
+            }
+
             foreach (UsersBook item in items)
             {
                 Console.WriteLine(item);

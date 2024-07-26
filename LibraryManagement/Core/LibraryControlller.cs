@@ -11,12 +11,12 @@ namespace LibraryManagement.Core
     public class LibraryControlller
     {
         public static readonly int PER_BOOK_FINE = 10;
-        
+
         private List<UsersBook> UserBooks = new List<UsersBook>();
-        
+
         public LibraryControlller()
         {
-             this.Load();
+            this.Load();
         }
 
         private void Load()
@@ -28,7 +28,7 @@ namespace LibraryManagement.Core
             }
         }
 
-        private bool Save() 
+        private bool Save()
         {
             return FileHelper.SaveIssuedBookList(this.UserBooks);
         }
@@ -43,7 +43,7 @@ namespace LibraryManagement.Core
         public double CalculateFineAmount(int userId)
         {
             var report = this.GetUserReport(userId);
-            double sum =  report.Sum((r) => (int)r["Fine Amount"]);
+            double sum = report.Sum((r) => (int)r["Fine Amount"]);
             return sum;
         }
 
@@ -52,9 +52,9 @@ namespace LibraryManagement.Core
             return this.UserBooks;
         }
 
-        public List<Dictionary<string, object>> GetUserReport(int id) 
+        public List<Dictionary<string, object>> GetUserReport(int id)
         {
-            var items = UserBooks.FindAll((u)=>u.UserId == id);
+            var items = UserBooks.FindAll((u) => u.UserId == id);
             var report = new List<Dictionary<string, object>>();
             foreach (var item in items)
             {
@@ -62,10 +62,19 @@ namespace LibraryManagement.Core
                 {
                     {"Book Id" , item.BookId },
                     {"Return Date" , item.ReturnDate },
-                    {"Fine Amount" , (DateTime.Today - DateTime.Parse(item.ReturnDate)).Days * PER_BOOK_FINE} 
+                    {"Fine Amount" , (DateTime.Today - DateTime.Parse(item.ReturnDate)).Days * PER_BOOK_FINE}
                 });
             }
             return report;
         }
+
+        public bool RequestBook(int userId, int bookId)
+        {
+            UserBooks.Add(new UsersBook(userId, bookId));
+            return this.Save();
+        }
+
+        // 
+
     }
 }

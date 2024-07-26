@@ -25,7 +25,7 @@ namespace LibraryManagement.Model
         public override string ToString()
         {
 
-            return $"User Id : {UserId} \t Book Id: {BookId} \t Return Date: ${ReturnDate}";
+            return $"User Id : {UserId} \t Book Id: {BookId} \t Return Date: {ReturnDate}";
         }
     }
 }

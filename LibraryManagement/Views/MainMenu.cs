@@ -11,7 +11,7 @@ namespace LibraryManagement.Views
     public class MainMenu
     {
         public static int AUTH_USER_ID;
-        public  void InitMenu()
+        public void InitMenu()
         {
             bool show = true;
             while (show)
@@ -37,8 +37,8 @@ namespace LibraryManagement.Views
                         Console.Clear();
                         break;
                 }
-            }    
-            
+            }
+
 
         }
 
@@ -49,14 +49,15 @@ namespace LibraryManagement.Views
             am.InitAdminMenu();
         }
 
-        public  void AuthUser()
+        public void AuthUser()
         {
             Console.Clear();
             Console.WriteLine("Enter User Id: ");
             int id = Int32.Parse(Console.ReadLine());
 
             //validate user id
-            if (!ValidationHelper.ValidateUserId(id)) {
+            if (!ValidationHelper.ValidateUserId(id))
+            {
                 Console.WriteLine($"User with id {id} doesn;t exist");
                 this.WishToContinue();
                 return;
@@ -66,7 +67,7 @@ namespace LibraryManagement.Views
             //validate user email
             // if valid email then prompt to user menu
             AUTH_USER_ID = id;
-            Console.Clear() ;
+            Console.Clear();
             UserMenu userMenu = new UserMenu();
             userMenu.InitUserMenu();
 

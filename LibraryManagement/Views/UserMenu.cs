@@ -6,13 +6,20 @@ using System.Threading.Tasks;
 using LibraryManagement.Core;
 using LibraryManagement.Core.Helpers;
 using LibraryManagement.Model;
+using Microsoft.VisualBasic;
 
 namespace LibraryManagement.Views
 {
     public class UserMenu
     {
         private static readonly int userId = MainMenu.AUTH_USER_ID;
+
         private BookController BookController;
+
+        private UserController UserController;
+
+        private LibraryControlller LibraryControlller;
+
         public void InitUserMenu()
         {
             try
@@ -24,6 +31,7 @@ namespace LibraryManagement.Views
                 Console.WriteLine("(4)  Return Borrowed Book");
                 Console.WriteLine("(5)  View My Report");
                 Console.WriteLine("(0)  Exit  Console (0 Or Any Other Key)");
+                Console.WriteLine("heam na Id");
                 string ch = Console.ReadLine();
                 this.HandleChoice(ch);
             }
@@ -36,7 +44,8 @@ namespace LibraryManagement.Views
         public UserMenu()
         {
             this.BookController = new BookController();
-
+            this.UserController = new UserController();
+            this.LibraryControlller = new LibraryControlller();
         }
         public void HandleChoice(string ch)
         {
@@ -47,10 +56,14 @@ namespace LibraryManagement.Views
                     break;
                 case "1":
                     this.ShowBooks();
+
                     break;
                 case "2":
-                    Console.WriteLine("hello Nepali");
                     this.FilterBooks();
+                    break;
+                case "3":
+                    Console.WriteLine("hello Nepali");
+                    this.RequestBook();
                     break;
 
             }
@@ -83,8 +96,9 @@ namespace LibraryManagement.Views
             {
                 Console.WriteLine($"{item.Id,-10}{Helper.TruncateWithEllispsis(item.Name),-40}{Helper.TruncateWithEllispsis(item.Author, 20),-25}{item.Category,-15}{item.PublishedYear,-10}{item.Pages}");
             }
-            this.WishToContinue();
+            // this.WishToContinue();
         }
+        // case 2
         public void FilterBooks()
         {
             var categories = BookController.GetCategories();
@@ -118,6 +132,47 @@ namespace LibraryManagement.Views
             {
                 Console.WriteLine("Error:" + e.Message);
             }
+        }
+
+        // case 3 Request a book
+
+        public void RequestBook()
+        {
+            var items = BookController.Index();
+            if (items.Count == 0)
+            {
+                Console.WriteLine("No Books found");
+                return;
+            }
+            this.DisplayBooks(items);
+            Console.WriteLine("Choose Book Name from the above List:");
+            string bookname = Console.ReadLine();
+            var requestBook = this.BookController.GetBookByName(bookname);
+            if (requestBook == null)
+            {
+                Console.WriteLine("Invalid Book.");
+                this.WishToContinue();
+                return;
+            }
+            if (ValidationHelper.IsIssued(requestBook.Id, userId))
+            {
+                Console.WriteLine("You have already taken this book.");
+                this.WishToContinue();
+                return;
+            }
+            if (ValidationHelper.CheckBookLimit(userId))
+            {
+                Console.WriteLine("You have already reached the book limit.");
+                this.WishToContinue();
+                return;
+            }
+            if (this.LibraryControlller.CalculateFineAmount(userId) > 0)
+            {
+                Console.WriteLine("You have fine amount to clear out.");
+                this.WishToContinue();
+                return;
+            }
+
         }
 
         public void WishToContinue()

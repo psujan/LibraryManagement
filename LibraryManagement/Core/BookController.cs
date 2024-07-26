@@ -20,10 +20,10 @@ namespace LibraryManagement.Core
             Load();
         }
 
-        
+
         private void Load()
         {
-            
+
             Dictionary<string, object>[] bookList = BookList.bookList;
 
             foreach (var book in bookList)
@@ -37,7 +37,7 @@ namespace LibraryManagement.Core
 
         public Book? GetBookById(int id)
         {
-           return books.Find((bk)=>bk.Id == id);
+            return books.Find((bk) => bk.Id == id);
         }
 
         public List<Book> Index()
@@ -45,9 +45,10 @@ namespace LibraryManagement.Core
             return books;
         }
 
-        public Book GetBookByName(string name)
+        public Book? GetBookByName(string name)
         {
-            return null;
+            return books.Find((bk) => bk.Name == name);
+            // return null;
         }
 
 
@@ -63,13 +64,25 @@ namespace LibraryManagement.Core
 
         public List<string> GetCategories()
         {
-            List<string> categories =  new List<string>();
-            return books.Select((b)=>b.Category).Distinct().ToList();
+            List<string> categories = new List<string>();
+            return books.Select((b) => b.Category).Distinct().ToList();
         }
 
         public List<Book> FindBookByCategory(string category)
         {
-            return books.FindAll((b)=>b.Category.ToLower() == category.ToLower()).ToList();
+            return books.FindAll((b) => b.Category.ToLower() == category.ToLower()).ToList();
+        }
+        public void CheckBookAvailability(string bookname)
+        {
+            if (bookname != GetBookByName(bookname).Name)
+            {
+                Console.WriteLine("Please enter Valid book.");
+            }
+            else
+            {
+                Console.WriteLine("Book Available.");
+                CheckUserDetails(userId, book);
+            }
         }
     }
 }

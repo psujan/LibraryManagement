@@ -28,5 +28,12 @@ namespace LibraryManagement.Core.Helpers
             var borrowedBooks = items.FindAll((x)=>x.UserId == id);
             return borrowedBooks.Count >= MAX_BORROW_LIMIT;
         }
+
+        public static bool IsIssued(int bId , int uId)
+        {
+            var items = new LibraryControlller().ListIssuedBooks();
+            var isIssued = items.Find((x) => x.UserId == uId && x.BookId == bId);
+            return isIssued is UsersBook;
+        }
     }
 }
